@@ -1,6 +1,6 @@
 {
   "name": "mapshaper-simplify",
-  "version": "0.5.65",
+  "version": "0.5.65-beta",
   "description": "GeoJson simplify. Extracted from Mapshaper",
   "keywords": [
     "geojson",
