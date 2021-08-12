@@ -1,6 +1,6 @@
 {
   "name": "mapshaper-simplify",
-  "version": "0.5.65-beta",
+  "version": "1.0.0",
   "description": "GeoJson simplify. Extracted from Mapshaper",
   "keywords": [
     "geojson",
@@ -55,10 +55,5 @@
     "terser": "^5.7.1",
     "tinyqueue": "^2.0.3",
     "underscore": "^1.13.1"
-  },
-  "bin": {
-    "mapshaper": "./bin/mapshaper",
-    "mapshaper-gui": "./bin/mapshaper-gui",
-    "mapshaper-xl": "./bin/mapshaper-xl"
   }
 }
