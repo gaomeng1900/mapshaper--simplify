@@ -9,7 +9,7 @@ import {
 	simplify,
 	importGeoJSON,
 	exportGeoJSON,
-} from 'mapshaper-simplyfy'
+} from 'mapshaper-simplify'
 
 const res = await fetch('./__country.json')
 const geojson = await res.json()
