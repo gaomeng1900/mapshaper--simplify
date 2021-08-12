@@ -1,6 +1,6 @@
 # Mapshaper geojson simplify
 
-This is the geojson simplification method directly extracted from [Mapshaper](https://github.com/mbloch/mapshaper)
+This is the geojson simplification method extracted directly from [Mapshaper](https://github.com/mbloch/mapshaper)
 
 ## Useage
 
