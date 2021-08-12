@@ -14,7 +14,7 @@
   "license": "MPL-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gaomeng1900/mapshaper"
+    "url": "https://github.com/gaomeng1900/mapshaper-simplify"
   },
   "scripts": {
     "test": "npx electron ./extracted/draw_entry.js",
