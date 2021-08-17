@@ -1,6 +1,6 @@
 {
   "name": "mapshaper-simplify",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "description": "GeoJson simplify. Extracted from Mapshaper",
   "keywords": [
     "geojson",
@@ -22,8 +22,10 @@
     "shake": "node ./shakecoverage.js"
   },
   "main": "./mapshaper.simplify.mjs",
+  "types": "./index.d.ts",
   "files": [
-    "/mapshaper.simplify.mjs"
+    "/mapshaper.simplify.mjs",
+    "/index.d.ts"
   ],
   "dependencies": {},
   "devDependencies": {
