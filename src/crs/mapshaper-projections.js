@@ -12,7 +12,7 @@ var projectionAliases = {
   robinson: '+proj=robin +datum=WGS84',
   webmercator: '+proj=merc +a=6378137 +b=6378137',
   wgs84: '+proj=longlat +datum=WGS84',
-  albersusa: new AlbersUSA() // with default parameters
+  // albersusa: new AlbersUSA() // with default parameters
 };
 
 // This stub is replaced when loaded in GUI, which may need to load some files

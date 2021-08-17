@@ -8,7 +8,8 @@ import utils from '../utils/mapshaper-utils';
 //    proj: Proj string
 //    bbox: lat-lon bounding box
 export function MixedProjection(mainParams, options) {
-  var mproj = require('mproj');
+  throw 'deleted by simon'
+  // var mproj = require('mproj');
   var mainFrame = initFrame(mainParams);
   var mainP = mainFrame.crs;
   var frames = [mainFrame];

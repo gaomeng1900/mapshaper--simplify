@@ -1,6 +1,6 @@
 
 import utils from '../utils/mapshaper-utils';
-import { encodeString } from '../text/mapshaper-encodings';
+// import { encodeString } from '../text/mapshaper-encodings';
 
 // Not a general-purpose deep copy function
 export function copyRecord(o) {
@@ -156,14 +156,15 @@ function adjustFieldName(name, maxLen, i) {
 
 // Truncate and/or uniqify a name (if relevant params are present)
 function adjustEncodedFieldName(name, maxLen, i, encoding) {
-  var suff = i ? String(i) : '';
-  var name2 = name + suff;
-  var buf = encodeString(name2, encoding);
-  if (buf.length > (maxLen || 256)) {
-    name = name.substr(0, name.length - 1);
-    return adjustEncodedFieldName(name, maxLen, i, encoding);
-  }
-  return name2;
+  throw 'deleted by simon!'
+  // var suff = i ? String(i) : '';
+  // var name2 = name + suff;
+  // var buf = encodeString(name2, encoding);
+  // if (buf.length > (maxLen || 256)) {
+  //   name = name.substr(0, name.length - 1);
+  //   return adjustEncodedFieldName(name, maxLen, i, encoding);
+  // }
+  // return name2;
 }
 
 export function applyFieldOrder(arr, option) {

@@ -9,6 +9,7 @@ import {
 	simplify,
 	importGeoJSON,
 	exportGeoJSON,
+	cleanPathsAfterImport,
 } from 'mapshaper-simplify'
 
 const res = await fetch('./__country.json')
@@ -16,10 +17,12 @@ const geojson = await res.json()
 console.log(geojson)
 
 console.time('importGeoJSON')
-const dataset = importGeoJSON(geojson, {
+const opts = {
 	snap: true,
 	no_repair: false
-})
+}
+const dataset = importGeoJSON(geojson, opts)
+cleanPathsAfterImport(dataset, opts)
 console.timeEnd('importGeoJSON')
 
 console.log(dataset)
