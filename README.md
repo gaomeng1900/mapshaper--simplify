@@ -6,41 +6,36 @@ This is the geojson simplification method extracted directly from [Mapshaper](ht
 
 ```javascript
 import {
-	simplify,
-	importGeoJSON,
-	exportGeoJSON,
-	cleanPathsAfterImport,
+	preBuild, 
+	simplify
 } from 'mapshaper-simplify'
 
 const res = await fetch('./__country.json')
 const geojson = await res.json()
 console.log(geojson)
 
-console.time('importGeoJSON')
-const opts = {
-	snap: true,
-	no_repair: false
-}
-const dataset = importGeoJSON(geojson, opts)
-cleanPathsAfterImport(dataset, opts)
-console.timeEnd('importGeoJSON')
+console.time('preBuild')
+const dataset = preBuild(geojson)
+console.timeEnd('preBuild')
 
 console.log(dataset)
+// console.log(JSON.stringify(dataset))
 
 console.time('simplify')
-simplify(dataset, {
-	percentage: 0.1,
-	keep_shapes: true,
-	no_repair: false,
-	method: 'weighted_visvalingam'
-})
+const geojson2 = simplify(dataset,  0.1)
 console.timeEnd('simplify')
+console.log(geojson2)
 
-console.time('exportGeoJSON')
-const b = exportGeoJSON(dataset)
-console.timeEnd('exportGeoJSON')
+// console.log(JSON.stringify(dataset))
+// console.log(JSON.stringify(geojson2))
 
-console.log(b[0].content)
+console.time('simplify')
+const geojson3 = simplify(dataset,  0.5)
+console.timeEnd('simplify')
+console.log(geojson3)
+
+// console.log(JSON.stringify(dataset))
+// console.log(JSON.stringify(geojson3))
 ```
 
 ## Why Bother?

@@ -1,20 +1,20 @@
-import { traversePaths } from '../paths/mapshaper-path-utils';
-import { groupPolygonRings } from '../polygons/mapshaper-ring-nesting';
-import { exportPathData } from '../paths/mapshaper-path-export';
-import { forEachPoint } from '../points/mapshaper-point-utils';
-import { layerHasPoints, layerHasPaths } from '../dataset/mapshaper-layer-utils';
-import { isLatLngCRS, getDatasetCRS } from '../crs/mapshaper-projections';
-import { getFormattedStringify, stringifyAsNDJSON } from '../geojson/mapshaper-stringify';
-import { mergeLayerNames } from '../commands/mapshaper-merge-layers';
-import { setCoordinatePrecision } from '../geom/mapshaper-rounding';
-import { copyDatasetForExport } from '../dataset/mapshaper-dataset-utils';
-import { encodeString } from '../text/mapshaper-encodings';
-import GeoJSON from '../geojson/geojson-common';
-import { message, error, stop } from '../utils/mapshaper-logging';
-import utils from '../utils/mapshaper-utils';
-import { Bounds } from '../geom/mapshaper-bounds';
-import { Buffer } from '../utils/mapshaper-node-buffer';
-import { getFileExtension } from '../utils/mapshaper-filename-utils';
+import { traversePaths } from '../paths/mapshaper-path-utils.js';
+import { groupPolygonRings } from '../polygons/mapshaper-ring-nesting.js';
+import { exportPathData } from '../paths/mapshaper-path-export.js';
+import { forEachPoint } from '../points/mapshaper-point-utils.js';
+import { layerHasPoints, layerHasPaths } from '../dataset/mapshaper-layer-utils.js';
+import { isLatLngCRS, getDatasetCRS } from '../crs/mapshaper-projections.js';
+import { getFormattedStringify, stringifyAsNDJSON } from '../geojson/mapshaper-stringify.js';
+import { mergeLayerNames } from '../commands/mapshaper-merge-layers.js';
+import { setCoordinatePrecision } from '../geom/mapshaper-rounding.js';
+import { copyDatasetForExport } from '../dataset/mapshaper-dataset-utils.js';
+import { encodeString } from '../text/mapshaper-encodings.js';
+import GeoJSON from '../geojson/geojson-common.js';
+import { message, error, stop } from '../utils/mapshaper-logging.js';
+import utils from '../utils/mapshaper-utils.js';
+import { Bounds } from '../geom/mapshaper-bounds.js';
+import { Buffer } from '../utils/mapshaper-node-buffer.js';
+import { getFileExtension } from '../utils/mapshaper-filename-utils.js';
 export default GeoJSON;
 
 // switch to RFC 7946-compatible output (while retaining the original export function,
@@ -61,7 +61,8 @@ export function exportGeoJSON(dataset, opts) {
     var name = mergeLayerNames(layers) || 'output';
     var d = utils.defaults({layers: layers}, dataset);
     return {
-      content: exportDatasetAsGeoJSON(d, opts, 'buffer'),
+      // content: exportDatasetAsGeoJSON(d, opts, 'buffer'),
+      content: exportDatasetAsGeoJSON(d, opts),
       filename: name + '.' + extension
     };
   });

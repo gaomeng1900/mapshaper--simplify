@@ -7,7 +7,6 @@ import utils from '../utils/mapshaper-utils';
 // https://github.com/ashtuchkin/iconv-lite/wiki/Supported-Encodings
 
 // var iconv = require('iconv-lite');
-// import * as iconv from 'iconv-lite'
 var toUtf8 = getNativeEncoder('utf8');
 var fromUtf8 = getNativeDecoder('utf8');
 
@@ -88,7 +87,7 @@ export function encodeString(str, enc) {
   if (encodingIsUtf8(enc)) {
     buf = toUtf8(str);
   } else {
-    // buf = iconv.encode(str, enc);
+    buf = iconv.encode(str, enc);
   }
   return buf;
 }

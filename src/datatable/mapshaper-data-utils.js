@@ -1,6 +1,6 @@
 
 import utils from '../utils/mapshaper-utils';
-// import { encodeString } from '../text/mapshaper-encodings';
+import { encodeString } from '../text/mapshaper-encodings';
 
 // Not a general-purpose deep copy function
 export function copyRecord(o) {
