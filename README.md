@@ -4,7 +4,7 @@ This is the geojson simplification method extracted directly from [Mapshaper](ht
 
 > This is the full version that supports polygon and lines features. If you only need polygon simplification, please use [mapshaper-simplify](https://github.com/gaomeng1900/mapshaper-simplify)
 
-## Useage
+## Usage
 
 ```javascript
 import { preBuild, simplify } from 'mapshaper-simplify-full'
@@ -39,9 +39,9 @@ The simplification process of Mapshaper handles the shared edges well enough in 
 
 However Mapshaper is not designed to be called programmatically on the fly.
 Nor to be light-weighted. The browser version of it is enormous with dependencies like
-buffer-es6 as polyfills since it's originaly designed to run in a node.js evirenment.
+buffer-es6 as polyfills since it's originally designed to run in a node.js environment.
 
-That's why I extracted the geojson simplification part and minify it as much as posible.
+That's why I extracted the geojson simplification part and minify it as much as posable.
 
 This is a smaller version that only supports polygon features. Check out [mapshaper-simplify](https://github.com/gaomeng1900/mapshaper-simplify).
 
