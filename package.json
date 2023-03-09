@@ -1,61 +1,61 @@
 {
-  "name": "mapshaper-simplify",
-  "version": "2.0.2",
-  "description": "GeoJson simplify. Extracted from Mapshaper",
-  "keywords": [
-    "geojson",
-    "browser",
-    "simplification",
-    "topology",
-    "gis"
-  ],
-  "author": "Simon <gaomeng1900@gmail.com>",
-  "contributors": [],
-  "license": "MPL-2.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gaomeng1900/mapshaper-simplify"
-  },
-  "scripts": {
-    "test": "npx electron ./extracted/draw_entry.js",
-    "build": "rollup --config",
-    "shake": "node ./shakecoverage.js"
-  },
-  "main": "./mapshaper.simplify.mjs",
-  "types": "./index.d.ts",
-  "files": [
-    "/mapshaper.simplify.mjs",
-    "/index.d.ts"
-  ],
-  "dependencies": {},
-  "devDependencies": {
-    "@ampproject/rollup-plugin-closure-compiler": "^0.27.0",
-    "@rollup/plugin-node-resolve": "^13.0.0",
-    "browserify": "^17.0.0",
-    "buffer-es6": "^4.9.3",
-    "commander": "^5.1.0",
-    "cookies": "^0.8.0",
-    "csv-spectrum": "^1.0.0",
-    "d3-scale-chromatic": "^2.0.0",
-    "deep-eql": ">=0.1.3",
-    "delaunator": "^5.0.0",
-    "electron": "^13.1.9",
-    "esm": "^3.2.25",
-    "flatbush": "^3.2.1",
-    "geokdbush": "^1.1.0",
-    "iconv-lite": "0.4.24",
-    "js-tokens": "^7.0.0",
-    "kdbush": "^3.0.0",
-    "mocha": "^8.4.0",
-    "mproj": "0.0.34",
-    "opn": "^5.3.0",
-    "rollup": "^2.28.2",
-    "rollup-plugin-terser": "^7.0.2",
-    "rw": "~1.3.3",
-    "shell-quote": "^1.6.1",
-    "sync-request": "5.0.0",
-    "terser": "^5.7.1",
-    "tinyqueue": "^2.0.3",
-    "underscore": "^1.13.1"
-  }
+	"name": "mapshaper-simplify-full",
+	"version": "2.0.2",
+	"description": "GeoJson simplify. Extracted from Mapshaper",
+	"keywords": [
+		"geojson",
+		"browser",
+		"simplification",
+		"topology",
+		"gis"
+	],
+	"author": "Simon <gaomeng1900@gmail.com>",
+	"contributors": [],
+	"license": "MPL-2.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/gaomeng1900/mapshaper-simplify"
+	},
+	"scripts": {
+		"test": "npx electron ./extracted/draw_entry.js",
+		"build": "rollup --config",
+		"shake": "node ./shakecoverage.js"
+	},
+	"main": "./mapshaper.simplify.mjs",
+	"types": "./index.d.ts",
+	"files": [
+		"/mapshaper.simplify.mjs",
+		"/index.d.ts"
+	],
+	"dependencies": {},
+	"devDependencies": {
+		"@ampproject/rollup-plugin-closure-compiler": "^0.27.0",
+		"@rollup/plugin-node-resolve": "^13.0.0",
+		"browserify": "^17.0.0",
+		"buffer-es6": "^4.9.3",
+		"commander": "^5.1.0",
+		"cookies": "^0.8.0",
+		"csv-spectrum": "^1.0.0",
+		"d3-scale-chromatic": "^2.0.0",
+		"deep-eql": ">=0.1.3",
+		"delaunator": "^5.0.0",
+		"electron": "^13.1.9",
+		"esm": "^3.2.25",
+		"flatbush": "^3.2.1",
+		"geokdbush": "^1.1.0",
+		"iconv-lite": "0.4.24",
+		"js-tokens": "^7.0.0",
+		"kdbush": "^3.0.0",
+		"mocha": "^8.4.0",
+		"mproj": "0.0.34",
+		"opn": "^5.3.0",
+		"rollup": "^2.28.2",
+		"rollup-plugin-terser": "^7.0.2",
+		"rw": "~1.3.3",
+		"shell-quote": "^1.6.1",
+		"sync-request": "5.0.0",
+		"terser": "^5.7.1",
+		"tinyqueue": "^2.0.3",
+		"underscore": "^1.13.1"
+	}
 }

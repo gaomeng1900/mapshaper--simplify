@@ -47,12 +47,10 @@
 
 // console.log(b[0].content)
 
-import {
-	preBuild, 
-	simplify
-} from '../mapshaper.simplify.mjs'
+import { preBuild, simplify } from '../mapshaper.simplify.mjs'
 
-const res = await fetch('./__country.json')
+// const res = await fetch('./__polygon.json')
+const res = await fetch('./__line.geojson')
 const geojson = await res.json()
 console.log(geojson)
 
@@ -61,20 +59,13 @@ const dataset = preBuild(geojson)
 console.timeEnd('preBuild')
 
 console.log(dataset)
-// console.log(JSON.stringify(dataset))
 
 console.time('simplify')
-const geojson2 = simplify(dataset,  0.1)
+const geojson2 = simplify(dataset, 0.1)
 console.timeEnd('simplify')
 console.log(geojson2)
 
-// console.log(JSON.stringify(dataset))
-// console.log(JSON.stringify(geojson2))
-
 console.time('simplify')
-const geojson3 = simplify(dataset,  0.5)
+const geojson3 = simplify(dataset, 0.5)
 console.timeEnd('simplify')
 console.log(geojson3)
-
-// console.log(JSON.stringify(dataset))
-// console.log(JSON.stringify(geojson3))
