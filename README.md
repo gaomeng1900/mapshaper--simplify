@@ -4,6 +4,8 @@ This is the geojson simplification method extracted directly from [Mapshaper](ht
 
 > This is the full version that supports polygon and lines features. If you only need polygon simplification, please use [mapshaper-simplify](https://github.com/gaomeng1900/mapshaper-simplify)
 
+> simplify may return a featureCollection or geometryCollection.
+
 ## Usage
 
 ```javascript
